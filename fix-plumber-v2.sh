@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# 1. Update Index Page (SEO Dominance + Magnet removal)
+cat << 'INNEREOF' > src/pages/index.astro
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
@@ -102,3 +106,72 @@ const metadata = {
     <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
   </FAQs>
 </Layout>
+INNEREOF
+
+# 2. Update About Page (Restore missing image)
+cat << 'INNEREOF' > src/pages/about.astro
+---
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import { lifetimeDeal } from '~/data/pricingData';
+
+const metadata = {
+  title: 'Our Mission - Plumber Pride | Built for Contractors',
+  description: 'We built Plumber Pride because plumbing is essential, but business is about trust.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+<Hero2
+    tagline="We Grow Your Business ⭐⭐⭐⭐⭐"
+    title='You Fix the Leaks.<br/><span class="text-accent dark:text-white">We Help You Build Your Reputation.</span>'
+    subtitle="Amazing contractors lose jobs without reviews. We ensure your reputation matches your skill. No monthly fees—just an automated system to keep your schedule full."
+    video="/images/hero-animation.mp4" 
+    poster="/images/hero-poster.webp"
+    image={{ src: '/images/hero-poster.webp' }}
+    actions={[{ variant: 'primary', text: 'Claim My Lifetime Access - $99', href: '/pricing/' }]}
+  />
+  <Content
+    isReversed
+    items={[
+        { title: 'The "Handshake" Moment', description: 'The best time for a review is the second you finish the job and the customer sees everything working perfectly. Your branded QR codes capture that relief instantly.', icon: 'tabler:sparkles' },
+        { title: 'Local Search SEO', description: 'When someone searches "emergency plumber near me," Google looks for star rating and recency. We automate both.', icon: 'tabler:map-pin' },
+        { title: 'Customer Retention', description: 'A customer who leaves a 5-star review is far more likely to call you next time. Our system turns a one-off repair into a lifelong customer.', icon: 'tabler:users' },
+    ]}
+    image={{ src: '/images/testimonial-4.webp', alt: 'Happy plumbing customer' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Why your business needs <span class="text-accent">Reviews on Autopilot ⭐⭐⭐⭐⭐</span>
+      </h3>
+      <p>Homeowners look at screens, not yellow pages. Your reviews are your digital handshake—we make sure yours is a 5-star introduction.</p>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      { title: 'Zero Maintenance', description: 'We know you’re busy in the field. Once we set up your system, you never have to log in or manage anything.', icon: 'tabler:settings' },
+      { title: 'The "Wall of Love" Widget', description: 'We automatically sync and showcase your best reviews on your website, building instant trust with new visitors 24/7.', icon: 'tabler:stars' },
+      { title: 'One-Time Payment', description: 'We don’t believe in monthly fees that eat your profits. $99 once, and you own the system for life.', icon: 'tabler:coin' },
+    ]}
+    image={{ src: '/images/testimonial-3.webp', alt: 'Plumber looking at reviews' }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">Our Commitment to Your Success</h2>
+      <p class="text-xl text-muted dark:text-slate-400 mb-8">We handle the technical hurdles so you can stay focused on the job. We are a partner in your growth, ensuring your online presence is as solid as your work.</p>
+    </Fragment>
+  </Content>
+
+  <Pricing class="pb-0" title={`<span class="text-accent dark:text-white">Invest in Your Business Future.</span>`} prices={[lifetimeDeal]} />
+</Layout>
+INNEREOF
+
+# 3. Git Push
+git add .
+git commit -m "Update Plumber Pride: Restored image and refined Local SEO verbiage"
+git push origin main
+
+echo "Plumber Pride updated and pushed!"
