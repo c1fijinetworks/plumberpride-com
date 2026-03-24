@@ -32,7 +32,7 @@ const metadata = {
     ]}
     video="/images/hero-animation.mp4" 
     poster="/images/hero-poster.webp" 
-    image={{ src: '/images/hero-poster.webp', width: 1024, height: 576 }}
+    image={{ width: 1024, height: 576 }}
     testimonial={{
         quote: "⭐⭐⭐⭐⭐ This is a game-changer! My phone doesn't stop ringing and my Google rating shot up in weeks. It pays for itself in one service call.",
         name: "Mike D., Plumbing Contractor"
@@ -80,7 +80,7 @@ const metadata = {
         { title: 'Step 2: We Build Your Engine', description: 'Tell us your company name. We set up your profile, Google sync, and custom QR codes.', icon: 'tabler:number-2' },
         { title: 'Step 3: Watch the Reviews Roll In', description: 'Display your QR code on your phone or business card. Clients scan, review, and your rating climbs.', icon: 'tabler:number-3' },
       ]}
-      image={{ src: '/images/testimonial-6.webp', alt: 'Plumber Pride system', width: 1024, height: 1024 }}
+      image={{ src: '/images/testimonial-6.webp', alt: 'Plumber Pride system in action', width: 1024, height: 1024 }}
     />
   </div>
 
@@ -95,10 +95,23 @@ const metadata = {
     items={[
         { title: 'How is this different from a QR code I make myself?', description: 'A standard QR code just opens a link. Our engine includes local SEO logic, a website widget, and a 3-click flow optimized for results.', icon: 'tabler:help' },
         { title: 'Do I need to give you my Google login?', description: 'No. We use your public Google Business link to sync everything. Your account stays 100% secure.', icon: 'tabler:lock' },
-        { title: 'What if I have multiple locations?', description: 'Each Google Maps location requires its own setup. Contact us for Multi-Truck or Multi-Location discounts!', icon: 'tabler:truck' },
+        { title: 'What if I have multiple trucks?', description: 'Each truck or Google Maps location requires its own setup. Contact us for Multi-Truck or Multi-Location discounts!', icon: 'tabler:truck' },
         { title: 'Is it really a one-time payment?', description: 'Yes. Most competitors charge $100+ every single month. We charge a one-time setup fee. You own the system for life.', icon: 'tabler:currency-dollar' },
     ]}
   >
     <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
   </FAQs>
+
+<Steps2
+    class="-mt-16"
+    title="Ready to dominate your local market?"
+    subtitle="Join the contractors using Plumber Pride to grow their business on autopilot. 100% White-Glove Setup."
+    items={[
+      { title: 'Same-Day Delivery', description: 'Get your custom codes and widget instructions in less than 24 hours.', icon: 'tabler:bolt' },
+      { title: 'Zero Tech Skills Required', description: 'If you can send a text, you can use this system.', icon: 'tabler:tool' },
+      { title: 'Save $600+ Per Year', description: 'Stop the SaaS drain. Pay once and never worry about your reputation bill again.', icon: 'tabler:coin' },
+    ]}
+    callToAction={{ text: 'Get Started Now - $99 Forever', href: '/pricing/' }}
+    image={{ src: '/images/testimonial-3.webp', alt: 'Plumber Pride setup', width: 600, height: 600 }}
+  />
 </Layout>
