@@ -1,6 +1,6 @@
 export const lifetimeDeal = {
-  title: 'Lifetime Deal (Limited time)',
-  subtitle: 'Pay once and own it forever.',
+  title: 'Lifetime Deal (First 300 Plumbers)',
+  subtitle: 'Lock in your $99 forever deal today.<br/><strong class="text-red-600 dark:text-red-400 text-lg">Price increases to $29/mo after the first 300 spots are gone.</strong>',
   price: 99,
   period: 'One-time payment',
   items: [
@@ -8,14 +8,16 @@ export const lifetimeDeal = {
     { description: 'Full Setup for you!' },
     { description: 'Automated Testimonial Collection' },
     { description: 'Beautiful Widget for your Website' },
-    { description: 'No subscription, ever!' },
+    { description: 'No monthly subscription, ever!' },
     { description: 'Includes All Future Updates' },
     { description: 'Zero Risk. 100% Satisfaction Guaranteed!' },
   ],
   callToAction: {
-    target: '_blank' as const,
-    text: 'Get the Forever Plan ( Limited time only )',
-    href: '#', // Add your payment link here
-    variant: 'success', // ADDED THIS LINE
+    target: '_top' as const,
+    text: 'Claim 1 of 300 Lifetime Spots',
+    href: '#', 
+    variant: 'success', 
   },
+  hasRibbon: true,
+  ribbonTitle: 'Selling Fast',
 };
