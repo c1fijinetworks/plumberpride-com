@@ -11,8 +11,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
 const metadata = {
-  title: 'The Five-Star Secret to a Full Book | Testimonial Makeup | $99 Forever',
-  description: 'The seamless review engine built for busy makeup artists. Automatically gather five-star love on Google, protect your studio’s reputation, and fill your books on autopilot.',
+  title: 'The Five-Star Secret to a Full Schedule | Plumber Pride | $99 Forever',
+  description: 'The seamless review engine built for busy plumbers. Automatically gather five-star love on Google, protect your reputation, and fill your schedule on autopilot.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -23,17 +23,17 @@ const metadata = {
   </Fragment>
   
   <Hero2
-    tagline="The #1 Review Engine for Makeup Artists & Studios ⭐⭐⭐⭐⭐"
-    title='<span class="text-accent dark:text-white">More 5-Star Reviews Without Putting Down the Brushes</span>'
-    subtitle="We automate glowing reviews. Turn your client's 'post-glam glow' into your best marketing ever!"
+    tagline="The #1 Review Engine for Plumbers & Contractors ⭐⭐⭐⭐⭐"
+    title='<span class="text-accent dark:text-white">More 5-Star Reviews Before You Even Leave the Driveway</span>'
+    subtitle="We automate glowing reviews. Turn that 'leak fixed' relief into your best local marketing ever!"
     actions={[
       { variant: 'primary', text: 'Claim My Lifetime Deal Today', href: '/pricing/' },
       { text: 'See How It Works', href: '#howitworks' },
     ]}
-    image={{ src: '/images/testimonial-5.webp', width: 1024, height: 576 }}
+    image={{ src: '/images/testimonial-5.webp', alt: 'Plumber Hero Image' }}
     testimonial={{
-        quote: "⭐⭐⭐⭐⭐ This is a game-changer! My books are full and my Google rating shot up in weeks. It pays for itself in one bridal booking.",
-        name: "Sarah L., Studio Owner"
+        quote: "⭐⭐⭐⭐⭐ This is a game-changer! My trucks are booked solid and my Google rating shot up in weeks. Pays for itself in one service call.",
+        name: "Mike R., Plumbing Contractor"
     }}
   />
   
@@ -41,12 +41,12 @@ const metadata = {
     class="-mt-16"
     id="features"
     title="Everything You Need to Dominate Local Search"
-    subtitle="We handle the tech. You focus on the makeup. Here is how we help you grow your studio:"
+    subtitle="We handle the tech. You focus on the pipes. Here is how we help you grow your plumbing business:"
     columns={2}
     items={[
-        { title: 'The "Final Look" Capture', description: 'Catch clients when they feel most beautiful—right at the makeup station. Our 3-click QR system makes it effortless for them to rave about you.', icon: 'tabler:sparkles' },
-        { title: 'Local SEO Dominance', description: 'Stop paying for ads. Consistent, fresh reviews rank your studio at the top of local search results automatically.', icon: 'tabler:rocket' },
-        { title: 'Done-For-You Same-day setup', description: 'Hate tech? We do the heavy lifting. We configure your Google sync, design your codes, and help you install the widget.', icon: 'tabler:settings-automation' },
+        { title: 'The "Job Well Done" Capture', description: 'Catch customers when they are most relieved—right after the fix. Our 3-click QR system makes it effortless for them to rave about you.', icon: 'tabler:tool' },
+        { title: 'Local SEO Dominance', description: 'Stop paying for expensive lead gen. Consistent, fresh reviews rank your business at the top of local search results automatically.', icon: 'tabler:rocket' },
+        { title: 'Done-For-You Same-day setup', description: 'Hate tech? We do the heavy lifting. We configure your Google sync, design your truck codes, and help you install the widget.', icon: 'tabler:settings-automation' },
         { title: 'No Monthly Fees', description: 'Stop paying $150/month for reputation software. One payment of $99 secures your system for life. No subscriptions ever!', icon: 'tabler:pig-money' },
     ]}
   />
@@ -54,12 +54,12 @@ const metadata = {
 <Content
     class="-mt-16"
     items={[
-        { title: 'Build Elite Social Proof', description: 'Bridal parties and luxury clients book based on ratings. We turn your best makeup transformations into automated proof that you are the #1 artist in your city.', icon: 'tabler:star-filled' },
-        { title: 'Showcase Your Artistry', description: 'Automatically sync your best 5-star Google reviews into a beautiful wall of love on your website to build instant trust.', icon: 'tabler:user-check' },
-        { title: 'Beat the Competition', description: 'When new clients compare artists, the one with 100+ reviews always wins. We make sure that artist is yours.', icon: 'tabler:trending-up' },
-        { title: 'Voice Search Priority', description: 'Be the first name Siri and Alexa speak when someone says, "Find me the best makeup artist in town."', icon: 'tabler:microphone' },
+        { title: 'Build Elite Social Proof', description: 'Homeowners book based on trust and ratings. We turn your successful repairs into automated proof that you are the #1 plumber in your city.', icon: 'tabler:star-filled' },
+        { title: 'Showcase Your Reliability', description: 'Automatically sync your best 5-star Google reviews into a beautiful wall of love on your website to build instant trust.', icon: 'tabler:user-check' },
+        { title: 'Beat the Competition', description: 'When new customers compare contractors, the one with 100+ reviews always wins. We make sure that contractor is you.', icon: 'tabler:trending-up' },
+        { title: 'Voice Search Priority', description: 'Be the first name Siri and Alexa speak when a homeowner says, "Find an emergency plumber near me."', icon: 'tabler:microphone' },
     ]}
-    image={{ src: '/images/testimonial-2.webp', alt: 'Makeup artist working on a client' }}
+    image={{ src: '/images/testimonial-2.webp', alt: 'Plumber working on a sink' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -72,13 +72,13 @@ const metadata = {
   <div id="howitworks" class="scroll-mt-20">
     <Steps2
       title="From Setup to 5-Stars in 24 Hours"
-      subtitle="Three simple steps to automate your studio's reputation."
+      subtitle="Three simple steps to automate your plumbing reputation."
       items={[
         { title: 'Step 1: Secure Your License', description: 'Purchase your $99 lifetime deal. No hidden fees or recurring subscriptions.', icon: 'tabler:number-1' },
-        { title: 'Step 2: We Build Your Engine', description: 'Tell us your studio name. We set up your brand profile, Google sync, and custom QR codes.', icon: 'tabler:number-2' },
-        { title: 'Step 3: Watch the Reviews Roll In', description: 'Display your QR code at your station. Clients scan, review, and your rating climbs.', icon: 'tabler:number-3' },
+        { title: 'Step 2: We Build Your Engine', description: 'Tell us your business name. We set up your brand profile, Google sync, and custom QR codes for your trucks.', icon: 'tabler:number-2' },
+        { title: 'Step 3: Watch the Reviews Roll In', description: 'Display your QR code on your clipboard or truck. Customers scan, review, and your rating climbs.', icon: 'tabler:number-3' },
       ]}
-      image={{ src: '/images/testimonial-6.webp', alt: 'Testimonial Makeup system' }}
+      image={{ src: '/images/testimonial-6.webp', alt: 'Plumber Pride system' }}
     />
   </div>
 
@@ -93,7 +93,7 @@ const metadata = {
     items={[
         { title: 'How is this different from a QR code I make myself?', description: 'A standard QR code just opens a link. Our engine uses smart deep-linking to open your branded review form instantly and a website widget to display reviews.', icon: 'tabler:help' },
         { title: 'Do I need to give you my Google login?', description: 'No. We use your public Google Business link to sync everything. Your account stays 100% secure.', icon: 'tabler:lock' },
-        { title: 'What if I have multiple locations?', description: 'Each studio location requires its own setup. Contact us for Multi-Location discounts!', icon: 'tabler:building-store' },
+        { title: 'What if I have multiple trucks/locations?', description: 'Each Google Maps location requires its own setup. Contact us for Multi-Truck discounts!', icon: 'tabler:truck' },
         { title: 'Is it really a one-time payment?', description: 'Yes. Instead of charging rent every month, we charge a single flat fee for the complete setup. You own it for life.', icon: 'tabler:currency-dollar' },
     ]}
   >
@@ -103,13 +103,13 @@ const metadata = {
 <Steps2
     class="-mt-16"
     title="Ready to dominate your local market?"
-    subtitle="Grow your studio using Testimonial Makeup on autopilot. 100% White-Glove Setup."
+    subtitle="Grow your plumbing business using Plumber Pride on autopilot. 100% White-Glove Setup."
     items={[
       { title: 'Same-Day Delivery', description: 'Get your custom codes and widget instructions in less than 24 hours.', icon: 'tabler:bolt' },
-      { title: 'Zero Tech Skills Required', description: 'If you can print a piece of paper, you can use this system.', icon: 'tabler:tool' },
-      { title: 'Save $600+ Per Year', description: 'Stop the subscription drain. Pay once and never worry about your reputation bill again.', icon: 'tabler:coin' },
+      { title: 'Zero Tech Skills Required', description: 'If you can fix a pipe, you can use this system. We do the tech.', icon: 'tabler:tool' },
+      { title: 'Save $1,200+ Per Year', description: 'Stop the subscription drain. Pay once and never worry about your reputation bill again.', icon: 'tabler:coin' },
     ]}
     callToAction={{ text: 'Get Started Now - $99 Forever', href: '/pricing/' }}
-    image={{ src: '/images/testimonial-3.webp', alt: 'Testimonial Makeup Alt3', width: 600, height: 600 }}
+    image={{ src: '/images/testimonial-3.webp', alt: 'Plumber Pride Review Engine', width: 600, height: 600 }}
   />
 </Layout>
